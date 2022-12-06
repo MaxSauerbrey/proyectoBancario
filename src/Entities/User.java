@@ -48,18 +48,6 @@ public class User {
         this.password = password;
     }
 
-    @Override
-    public boolean equals(Object o) {
-        if (this == o) return true;
-        if (!(o instanceof User user)) return false;
-
-        return userName.equals(user.userName);
-    }
-
-    @Override
-    public int hashCode() {
-        return userName.hashCode();
-    }
 
     @Override
     public String toString() {

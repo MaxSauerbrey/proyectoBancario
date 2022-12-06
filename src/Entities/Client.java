@@ -60,23 +60,6 @@ public class Client {
         this.user = user;
     }
 
-    @Override
-    public boolean equals(Object o) {
-        if (this == o) return true;
-        if (!(o instanceof Client client)) return false;
-
-        if (!getPhone().equals(client.getPhone())) return false;
-        if (!getEmail().equals(client.getEmail())) return false;
-        return getUser().equals(client.getUser());
-    }
-
-    @Override
-    public int hashCode() {
-        int result = getPhone().hashCode();
-        result = 31 * result + getEmail().hashCode();
-        result = 31 * result + getUser().hashCode();
-        return result;
-    }
 
     @Override
     public String toString() {
