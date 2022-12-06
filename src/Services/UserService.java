@@ -43,7 +43,7 @@ public class UserService {
         user.setUserName(auxUserName);
     }
 
-    public String validatorString(String msj) {
+    private String validatorString(String msj) {
         String str;
         System.out.print("Ingrese el " + msj + " del cliente: ");
         str = input.next();
@@ -55,7 +55,7 @@ public class UserService {
         return str;
     }
 
-    public boolean uniqueUserName(String userName) {
+    private boolean uniqueUserName(String userName) {
         Boolean match = false;
 
         for (Client client : ClientService.clients) {
@@ -68,7 +68,7 @@ public class UserService {
         return match;
     }
 
-    public boolean uniqueNumberCard (String numberCard){
+    private boolean uniqueNumberCard (String numberCard){
         Boolean match = false;
         for(Client client: ClientService.clients){
             if(client.getUser().getCardNumber().equals(numberCard)){
